@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{inconsolata}
+
+\lstset{
+    basicstyle=\ttfamily, % Use the monospaced font
+    numbers=left,         % Display line numbers on the left
+    numberstyle=\tiny,    % Style of the line numbers
+    stepnumber=1,         % Step between two line-numbers
+    numbersep=5pt,        % Distance between the line numbers and the code
+    frame=single,         % Adds a frame around the code
+    breaklines=true,      % Wrap long lines
+    postbreak=\mbox{$\hookrightarrow$\space}, % Adds a symbol at the end of wrapped lines
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{Innopolis University \\ (Timolai Andrievich, \\ Ammar Meslmani, \\ Laith Nayal)}
+\renewcommand{\headrulewidth}{0pt}
+
+\geometry{margin=0.5in, top=80pt, bottom=2in}
+\setlength{\headheight}{60pt}
+
+
+\begin{document}
+
+\section{Templates}
+\emph{This section is an example for adding sections to TRD, needs to be removed before printing.}
+
+\subsection{C++ template}
+\input{templates/cpp-template/text.tex}
+
+\subsection{Python template}
+\input{templates/py-template/text.tex}
+
+\end{document}
