@@ -1,0 +1,3 @@
+Z-function of string $S$, index $i$ is the length of the longest prefix of $S$, such that it coincides with prefix of slice $S[i:]$. It can be used for searching for a string $T$ in the string $S$, by calculating the Z-function of $T\#S$, where $\#$ is some character not present in $S$ or $T$. Z-function can be calculated in $O(S + T)$ time, which gives an advantage over the naive method.
+
+\lstinputlisting[language=c++]{./algorithms/z-function/code.cpp}
