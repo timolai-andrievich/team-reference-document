@@ -3,15 +3,13 @@ The set of correct bracket sequences $\mathbb{S}$ can be defined in a following 
   \item $\epsilon \in \mathbb{S}$
   \item $\forall (s_1, s_2) \in \mathbb{S}^2\left["(" \frown s_1 \frown ")" \frown s_2 \in \mathbb{S}\right]$
 \end{enumerate}
-
-From this definition, the following recurrent formula for the number of correct bracket sequences of length $n$ can be derived: \\
+From this definition, the following recurrent formula for the number of correct bracket sequences of length $n$ can be derived:
 \begin{align*}
   C_0 &= 1 \\
   C_n &= \sum\limits_{i=0}^{n - 1} C_i C_{n - 1 - i}
 \end{align*}
-
+\\ \\
 The analytical formula is:
-
 \begin{equation*}
   C_n = \binom{2n}{n} \frac{1}{n + 1}
 \end{equation*}
