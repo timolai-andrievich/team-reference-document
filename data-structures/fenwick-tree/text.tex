@@ -1,3 +1,5 @@
 Updating the $i$-th element of the Fenwick tree updates all elements with indicies $j \geq i$. As such, it can be used to perform min/max queries on the suffix of an array. It also can be used for range updates if the operation is reversible (i.e. $\forall x\left[\exists -x: f(x, -x) = 0_f\right]$)
-
+\\ \\ 
+The time complexity of the Fenwick tree is $O(n)$ to create and $O(n \log n)$ to update and query.
+\\ \\ 
 \lstinputlisting[language=c++]{./data-structures/fenwick-tree/code.cpp}
