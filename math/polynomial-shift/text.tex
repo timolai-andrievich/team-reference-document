@@ -1,0 +1,8 @@
+Given a polynomial $P(x)$ of degree $n$, the task is to calculate coefficients of $Q(x) = P(x + a)$. To do that, calculate: 
+\begin{align*}
+U_k &= P_{n-k} (n - k)! \\
+V_k &= \frac{a^k}{k!} \\
+G &= (U \ast V) \\
+Q_k &= \frac{G_k}{k!}
+\end{align*}
+\lstinputlisting[language=c++]{./math/polynomial-shift/code.cpp}
