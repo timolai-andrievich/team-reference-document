@@ -1,0 +1,6 @@
+services:
+  texlive:
+    image: texlive/texlive:latest
+    volumes:
+      - ./:/workdir/
+    command: /bin/bash -c "git config --global --add safe.directory /workdir && /bin/bash dev.sh"

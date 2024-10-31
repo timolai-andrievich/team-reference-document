@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 function get_hash() {
@@ -24,7 +24,8 @@ function mainloop() {
   while true; do
     new_hash=$(get_hash);
     if [ "$new_hash" != "$old_hash" ]; then 
-      ./compile.sh;
+      echo "Recompilng...";
+      ./compile.sh > /dev/null;
     fi;
     old_hash=$new_hash;
     sleep $timeout;

@@ -1,8 +1,5 @@
-Segment tree is a data structure that allows for range queries and pointwise updates. To build a segment tree on group $(G, \odot)$, the following conditions must hold:
-\begin{enumerate}
-  \item $\exists 0_{\odot}: \forall x \in G \left[ x \odot 0_{\odot} = x \right]$ (The tree still can be built, but without padding, which is slightly less convenient.)
-  \item $\forall x \in G, y \in G \left[ x \odot y = y \odot x \right]$ (The operation must be associative, otherwise the result of the query will be basically random.)
-\end{enumerate}
+Segment tree is a data structure that allows for range queries and pointwise updates.
+\\ \\
 The time complexity of the segment tree is $O(n)$ to build, $O(n \log n)$ to update and query.
 \\ \\
 \lstinputlisting[language=c++]{./data-structures/segment-tree/code.cpp}
