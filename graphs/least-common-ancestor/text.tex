@@ -1,0 +1,3 @@
+It is possible to solve LCA task by building a tour $T$ on the tree such that an ancestor of any two vertices $w = LCA(u, v)$ lies between any two occurences of $u$ and $v$, and performing RMQ (range minimum query) on the array of depth of vertices on the tour. This can be done as follows: start a depth-first search on any vertice, and appending the vertice to lists at the beginning of the DFS execution, and after executing DFS on a child. Then, build an array $I$ such that $I(u)$ is an index of first/last occurence of $u$ in the tour: $T(I(u)) = u$. Then, if $I(u) < I(v)$: $LCA(u, w) = T(RMQ(I(u), I(v)))$
+
+\lstinputlisting[language=c++]{./graphs/least-common-ancestor/code.cpp}
