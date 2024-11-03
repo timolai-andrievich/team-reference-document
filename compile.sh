@@ -8,4 +8,6 @@ if [ $COMPILED -eq 0 ]; then
   rm *.toc 
   rm *.log
   rm *.aux
+else 
+  exit 1;
 fi

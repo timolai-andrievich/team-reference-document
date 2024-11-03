@@ -20,12 +20,15 @@ function get_hash() {
 
 function mainloop() {
   old_hash="";
-  timeout=2;
+  timeout=0.2;
   while true; do
     new_hash=$(get_hash);
     if [ "$new_hash" != "$old_hash" ]; then 
       echo "Recompilng...";
-      ./compile.sh > /dev/null;
+      OUTPUT=$(./compile.sh);
+      if [ $? -ne 0 ]; then 
+        echo $OUTPUT;
+      fi;
     fi;
     old_hash=$new_hash;
     sleep $timeout;
