@@ -1,4 +1,6 @@
 *.log
 *.aux
+*.toc
 *.pdf
+*.out
 ./.mypy_cache

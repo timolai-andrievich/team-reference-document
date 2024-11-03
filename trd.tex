@@ -6,6 +6,9 @@
 \usepackage{geometry}
 \usepackage{listings}
 \usepackage{inconsolata}
+\usepackage{hyperref}
+\hypersetup{pdftex,colorlinks=true,allcolors=black}
+\usepackage{hypcap}
 
 \lstset{
     basicstyle=\ttfamily, % Use the monospaced font
@@ -24,11 +27,13 @@
 \fancyhead[L]{Innopolis University (Timolai Andrievich, Ammar Meslmani, Laith Nayal)}
 \renewcommand{\headrulewidth}{0pt}
 
-\geometry{margin=0.5in, top=40pt, bottom=2in}
+\geometry{margin=0.5in, top=40pt, bottom=1in}
 \setlength{\headheight}{40pt}
 
 
 \begin{document}
+
+\tableofcontents
 
 % \section{Templates}
 % \emph{This section is an example for adding sections to TRD, needs to be removed before printing.}
@@ -41,21 +46,27 @@
 
 \section{Algorithms}
 
-\subsection{Z-function}
-\input{./algorithms/z-function/text.tex}
-
+\subsection{Extended Euclidean Algorithm} \input{./algorithms/extended-euclidean-algorithm/text.tex}
+\subsection{FFT} \input{./algorithms/fast-fourier-transform/text.tex}
+\subsection{Fast Exponentiation} \input{./algorithms/fastpow/text.tex}
+\subsection{Miller-Rabin Primality Test} \input{./algorithms/miller-rabin-primality-test/text.tex}
+\subsection{Z-function} \input{./algorithms/z-function/text.tex}
 
 \section{Data Structures}
 
-\subsection{Fenwick Tree}
-\input{data-structures/fenwick-tree/text.tex}
+\subsection{Fenwick Tree} \input{./data-structures/fenwick-tree/text.tex}
+\subsection{Segment Tree} \input{./data-structures/segment-tree/text.tex}
 
-\subsection{Segment Tree}
-
-\input{data-structures/segment-tree/text.tex}
 
 \section{Math}
-\subsection{Correct Bracket Sequences}
-\input{math/correct-bracket-sequences/text.tex}
+
+\subsection{Correct Bracket Sequences} \input{./math/correct-bracket-sequences/text.tex}
+\subsection{Polynomial Shift} \input{./math/polynomial-shift/text.tex}
+
+
+\section{Graphs}
+
+\subsection{DFS Trees} \input{./graphs/dfs-trees/text.tex}
+\subsection{Least Common Ancestor} \input{./graphs/least-common-ancestor/text.tex}
 
 \end{document}
