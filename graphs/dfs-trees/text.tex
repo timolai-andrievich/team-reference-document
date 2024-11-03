@@ -1,0 +1,8 @@
+DFS trees is a technique to find bridges in a graph, where bridge is such an edge $e$ that the number of connected components in graph $G = (V, E)$ increases if $e$ is removed. To do so, the graph is hanged by one of its vertices, and tree is build in depth-first search. A few values are tracked for each node: \verb|time|, which is just the depth of the vertice in the tree, and \verb|low|, which is calculated as follows:
+\begin{align*}
+  \text{low}(u) = \min\left\{ \min\limits_{c \in C_u} \text{low}(c), \min\limits_{b \in B_u} \text{time}_b \right\}
+\end{align*}
+
+Where $C_u$ is the set of children of $u$, $B_u$ is the set of backlings from $u$, and $\text{time}_b$ is the depth of the vertice $b$.
+
+\lstinputlisting[language=c++]{./graphs/dfs-trees/code.cpp}
