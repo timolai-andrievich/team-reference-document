@@ -1,0 +1,8 @@
+To find strongly connected components:
+\begin{enumerate}
+  \item Run DFS on the graph, keeping track of $T_{\text{out}}(u)$ - time DFS left $u$. Time is a global timer, increased every time DFS terminates.
+  \item Let $G' = (V, E'), E' = \{(v, u) | (u, v) \in E\}$, i.e. graph with inverted edges.
+  \item Run DFS on $G$, in decreasing order of $T_\text{out}$. The resulting trees will be strongly connected components of $G$.
+\end{enumerate}
+
+\lstinputlisting[language=c++]{./graphs/strongly-connected-components/code.cpp}
